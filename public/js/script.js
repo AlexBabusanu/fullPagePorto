@@ -7,7 +7,7 @@ var inView = 1;
 var animating = false;
 
 if(window.location.pathname != "/") {
-	$("header").css("color", "#000")
+	$("header").css("color", "black")
 }
 
 
