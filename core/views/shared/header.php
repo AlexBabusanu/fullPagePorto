@@ -11,6 +11,6 @@
 	<a href="/">Work</a>
 	<a href="/">Home</a>
 	<a href="#" class="logo">Logo</a>
-	<a href="">About me</a>
+	<a href="/about">About me</a>
 	<a href="/contact">Contact</a>
 </header>

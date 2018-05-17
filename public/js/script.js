@@ -6,12 +6,14 @@ var height = $(window).height();
 var inView = 1;
 var animating = false;
 
+
 if(window.location.pathname != "/") {
 	$("header").css("color", "black")
 }
 
 
 $(".page:first-child").children(".image").addClass("pActive");
+$(".navigation p:first-child").addClass("nActive");
 
 $(".logo").on("click", function(){
 	inView = 2;
@@ -39,13 +41,19 @@ function scrollDown() {
 		}
 
 		else {
+			
 			inView++;
+			$(".navigation p:nth-child(" + (inView - 1) + ")").removeClass("nActive");
+			$(".navigation p:nth-child(" + inView + ")").addClass("nActive");
+			$(".navigation").animate({
+				marginTop: "-=40px"
+			},1000,"easeInOutQuint", function(){				
+				
+				
+			});
 			$("html, body").animate({
 				scrollTop: $(".page:nth-child(" + inView +")").offset().top
-			}, 1000, "easeInOutQuint", function(){
-				$(".navigation").css("margin-top", "-=40px")
-				$(".navigation p:nth-child(" + (inView - 1) + ")").css("opacity", "1");
-				$(".navigation p:nth-child(" + inView + ")").css("opacity", "0")
+			}, 1000, "easeInOutQuint", function(){				
 				$(".page:nth-child(" + (inView - 1) +")").children(".image").removeClass("pActive");
 				$(".page:nth-child(" + inView +")").children(".image").addClass("pActive");
 				animating = false;
@@ -72,14 +80,20 @@ function scrollUp() {
 
 		}
 		else {
+
 		inView--;
+		$(".navigation p:nth-child(" + (inView + 1) + ")").removeClass("nActive");
+		$(".navigation p:nth-child(" + inView + ")").addClass("nActive");
+		$(".navigation").animate({
+				marginTop: "+=40px"
+			},1000, "easeInOutQuint", function(){
+				
+			});
 		$("html, body").animate({
 			scrollTop: $(".page:nth-child(" + inView +")").offset().top
 
 		}, 1000, "easeInOutQuint", function(){
-			$(".navigation").css("margin-top", "+=40px")
-			$(".navigation p:nth-child(" + (inView + 1) + ")").css("opacity", "1");
-			$(".navigation p:nth-child(" + inView + ")").css("opacity", "0");
+			
 			$(".page:nth-child(" + (inView + 1) +")").children(".image").removeClass("pActive");
 			$(".page:nth-child(" + inView +")").children(".image").addClass("pActive");
 			animating = false;
@@ -89,6 +103,7 @@ function scrollUp() {
 	}
 }
 
+if(window.location.pathname == "/") {
 
 $(window).bind("mousewheel", function(event){
 		if(event.originalEvent.wheelDelta>=0){
@@ -133,5 +148,7 @@ $(document).on("scroll", function(){
 	}, 66)
 	}
 })
+
+}
 });
 

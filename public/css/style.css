@@ -31,6 +31,7 @@ header {
 	z-index:50;
 	display:flex;
 	justify-content: center;
+	text-transform: uppercase;
 }
 header a {
 	margin:15px;
@@ -45,6 +46,19 @@ header a:hover {
 
 
 /* index view css */
+
+.block {
+	top:0;
+	position:fixed;
+	width:100%;
+	height:100vh;
+	background: linear-gradient(90deg,  rgba(0,0,0,0) 40%, transparent 150px, transparent),
+              linear-gradient(0deg,   rgba(0,0,0,0) 45%, transparent 150px, transparent),
+              linear-gradient(-90deg, rgba(0,0,0,0) 40%, transparent 150px, transparent),
+              linear-gradient(180deg, rgba(0,0,0,0) 45%, transparent 150px, transparent);
+}
+
+
 .navigation {
 
 	position:fixed;
@@ -55,9 +69,15 @@ header a:hover {
 	justify-content: center;
 	z-index:2;
 	text-align:center;
-	display:none;
+	margin-top:40px;
 }
-
+.navigation p {
+	transition: 1000ms all linear;
+}
+.nActive {
+	opacity:0;
+	transition: 1000ms all linear;
+}
 .page {
 	width:100%;
 	height:100vh;
@@ -86,14 +106,18 @@ header a:hover {
 	width:100%;
 	height:100%;
 	background: #000;
-	opacity:0;
+	opacity:0.4;
 
 }
-.hello {
+.title {
 	position:absolute;
 	z-index:5;
 	overflow:hidden;
 }
+.title h1 {
+	position:relative;
+}
+
 
 footer {
 	color:#000;
@@ -102,7 +126,7 @@ footer {
 	position:relative;
 	overflow:hidden;
 	transition:all 200ms linear;
-	box-shadow:inset 0px 9px 11px -5px #000;
+	box-shadow:inset 0px 6px 11px -5px #000;
 
 }
 footer ul {
@@ -196,4 +220,52 @@ button {
 button:hover {
 	box-shadow:inset 0 0 0 2px #000;
 	transition: 200ms all linear;
+}
+
+
+/* about page css */
+
+
+.about {
+	position:relative;
+	background:#fff;
+	color:#000;
+	width:100%;
+	padding-top:50px;
+}
+.introduction {
+	margin:80px;
+}
+.separator {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	text-transform: uppercase;
+}
+
+.columns {
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr
+}
+.col:nth-child(3n) {
+	border-right:none;
+}
+.col {
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	text-align: center;
+	padding:40px;
+}
+.col h3 {
+	text-transform: uppercase;
+}
+.col svg {
+	max-width:280px;
+	filter:grayscale(100%);
+}
+.break {
+	width:50px;
+	height:1px;
+	background: #000;
+	margin:0 auto;
+
 }

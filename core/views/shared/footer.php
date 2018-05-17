@@ -1,5 +1,6 @@
 <footer>
 	<h1>Contact me</h1>
+	<div class="break"></div>
 	<a href=""><h2>babusanualex@yahoo.com</h2></a>
 <ul>
 	<li style="background:#3B5998"><a href=""><i class="fab fa-facebook-f"></i></a></li>

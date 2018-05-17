@@ -7,11 +7,11 @@ return [
 	],
 	"portofolio1" =>[
 		"name" => "First Portofolio",
-		"image" => "public/media/portofolio1.jpg"
+		"image" => "public/media/portofolio1.jpeg"
 	],
 	"portofolio2" =>[
-		"name" => "First Portofolio",
-		"image" => "public/media/portofolio1.jpg"
+		"name" => "Second Portofolio",
+		"image" => "public/media/portofolio2.jpg"
 	],
 
 ];

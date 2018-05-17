@@ -3,6 +3,7 @@
 
 <div class="contact">
 	<h1>Contact Me</h1>
+	<div class="break"></div>
 	<form>
 		<div class="input">
 		<label>Your Name</label>
