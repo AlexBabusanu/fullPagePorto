@@ -12,10 +12,12 @@ body {
 
 a {
 	text-decoration: none;
+	color:inherit;
 }
 a:visited {
 	color:inherit;
 }
+
 h1, h2, h3, h4, h5 {
 	text-align: center;
 }
@@ -26,41 +28,47 @@ h1, h2, h3, h4, h5 {
 
 header {
 	position:fixed;
-	width:100vw;
+	width:100%;
 	margin:0 auto;
 	z-index:50;
 	display:flex;
 	justify-content: center;
 	text-transform: uppercase;
+	align-items:center;
 }
 header a {
 	margin:15px;
-	font-size:20px;
+	font-size:12px;
 }
-header a:hover {
-	border-bottom:1px solid #fff;
+.logo {
+	width:15px;
+	height:15px;
+	padding:10px;
+	border-radius:50%;
+	border:2px solid #000;
 }
-.images {
-	position:relative;
+header a span {
+	height:1px;
+	background:#fff;
+	display:block;
+	width:0%;
+	transition: all 200ms linear;
+	margin-top:5px;
 }
+header a:hover span {
+	width:100%;
+	transition: all 200ms linear;
+}
+
 
 
 /* index view css */
 
-.block {
-	top:0;
-	position:fixed;
-	width:100%;
-	height:100vh;
-	background: linear-gradient(90deg,  rgba(0,0,0,0) 40%, transparent 150px, transparent),
-              linear-gradient(0deg,   rgba(0,0,0,0) 45%, transparent 150px, transparent),
-              linear-gradient(-90deg, rgba(0,0,0,0) 40%, transparent 150px, transparent),
-              linear-gradient(180deg, rgba(0,0,0,0) 45%, transparent 150px, transparent);
+.images {
+	position:relative;
+	z-index:0;
 }
-
-
 .navigation {
-
 	position:fixed;
 	width:100%;
 	height:100vh;
@@ -70,9 +78,66 @@ header a:hover {
 	z-index:2;
 	text-align:center;
 	margin-top:40px;
+	display:none;
+}
+.navigation ul {
+	list-style:none;
 }
 .navigation p {
 	transition: 1000ms all linear;
+
+}
+.navTop {
+	height:200px;
+	overflow:hidden;
+}
+.navTop ul {
+	margin-top:200px;
+	
+	letter-spacing:.200em;
+}
+.breakW {
+	background:#fff;
+	height:25px;
+	width:2px;
+	margin:10px auto;
+	opacity: 0.6;
+}
+.navBot {
+	overflow:hidden;
+	height:200px;
+}
+.navBot ul {
+	margin-top:-90px;
+	
+	letter-spacing:.200em;
+}
+.navBot h3, .navTop h3 {
+	opacity:0.6;
+}
+.navBot h3:hover, .navTop h3:hover {
+	opacity:1;
+}
+
+.main {
+	position:relative;
+	height:100px;
+	width:100%;
+	overflow:hidden;
+}
+.main ul {
+	margin:0;
+	display:flex;
+	position:relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height:200px;
+}
+.main li {
+	line-height:0;
+	font-size:35px;
+	letter-spacing:.300em;
 }
 .nActive {
 	opacity:0;
@@ -88,6 +153,14 @@ header a:hover {
 	align-items:center;
 	overflow:hidden;
 
+}
+
+.pageName a {
+	z-index:6;
+	position:absolute;
+	display:flex;
+	width:100%;
+	justify-content: center;
 }
 .image {
 	position:absolute;
@@ -120,37 +193,38 @@ header a:hover {
 
 
 footer {
+
 	color:#000;
 	background: #fff;
-	height:0px;
+	height:300px;
 	position:relative;
 	overflow:hidden;
 	transition:all 200ms linear;
 	box-shadow:inset 0px 6px 11px -5px #000;
 
 }
-footer ul {
+footer ul, {
 	color:#fff;
 }
-ul {
+footer ul, .contact ul {
 	list-style:none;
 	display:flex;
 	justify-content:center;
 	padding:0;
 }
-ul li {
+footer ul li, .contact ul li {
 	margin:10px;
 	border-radius:50%;
 }
-ul li a {
+footer ul li a, .contact ul li a {
 	padding:10px;
 	width:15px;
 	height:15px;
 	display:flex;
 	justify-content: center;
 }
-.fActive {
-	height:300px;
+.fInactive {
+	height:0px;
 	transition: all 200ms linear;
 }
 
@@ -196,6 +270,14 @@ input {
 	box-sizing:border-box;
 	border:2px solid #000;
 }
+input:focus {
+	outline:none;
+	border: 3px solid #000;
+}
+input[type=text] {
+	font-size:18px;
+	font-weight:bold;
+}
 .textArea {
 	width:100%;	
 	margin:10px;
@@ -205,6 +287,12 @@ textarea {
 	height:250px;
 	box-sizing:border-box;
 	border:2px solid #000;
+	font-weight:bold;
+	font-size:14px;
+}
+textarea:focus {
+	outline:none;
+	border:3px solid #000;
 }
 button {
 	height:30px;
@@ -214,6 +302,7 @@ button {
 	border:2px solid #000;
 	border-radius:5px;
 	text-transform: uppercase;
+	font-weight:bold;
 
 }
 
@@ -259,7 +348,7 @@ button:hover {
 	text-transform: uppercase;
 }
 .col svg {
-	max-width:280px;
+	max-width:200px;
 	filter:grayscale(100%);
 }
 .break {

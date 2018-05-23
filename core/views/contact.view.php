@@ -7,11 +7,11 @@
 	<form>
 		<div class="input">
 		<label>Your Name</label>
-		<input type="name" name="name">
+		<input type="text" name="name">
 		</div>
 		<div class="input">
 		<label>Your Email Adress</label>
-		<input type="email" name="email">
+		<input type="text" name="email">
 	</div>
 	<div class="textArea">
 		<label>Your Message</label>
