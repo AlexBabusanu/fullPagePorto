@@ -60,6 +60,21 @@ header a:hover span {
 	transition: all 200ms linear;
 }
 
+.navLight {
+	background:#fff;
+	color:#000;
+	box-shadow: 0px 0px 5px #000;
+	height:0px;
+	overflow: hidden;
+	transition: 300ms all linear;
+	position:fixed!important;
+}
+
+.active {
+	height:50px;
+	transition: 300ms all linear;
+
+}
 
 
 /* index view css */
@@ -169,7 +184,7 @@ header a:hover span {
 }
 .pActive {
 	transform: matrix(1.15, 0, 0, 1.15, 0, 0);
-	transition: 30000ms all linear;
+	transition: 25000ms all linear;
 }
 .page img {
 	object-fit:cover;
@@ -357,4 +372,76 @@ button:hover {
 	background: #000;
 	margin:0 auto;
 
+}
+
+/* website page */
+
+.website {
+	height:50vh;
+	overflow:hidden;
+
+}
+.website img {
+	width:100%;
+}
+.title {
+	position:absolute;
+	height:inherit;
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size:40px;
+	letter-spacing: .200em;
+}
+
+.details {
+	background: #fff;
+	color:#000;
+	overflow:hidden;
+
+}
+.details img {
+	width:50%;
+	height:100%;
+}
+
+.info {
+	display:flex;
+	margin: 20px auto;
+}
+.aboutWebsite {
+	width: 50%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+.arrows {
+	display:flex;
+	background:black;
+	justify-content: center;
+	text-align:center;
+}
+.leftArrow {
+	width:50%;
+	height:100px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	border-right:2px solid #fff;
+}
+.rightArrow {
+	height:100px;
+	width:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.container {
+	max-width:980px;
+	margin:auto;
+}
+.responsiveImg img {
+	width: 100%;
 }

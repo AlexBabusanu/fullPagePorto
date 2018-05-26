@@ -15,3 +15,10 @@
 	<a href="/about">About me<span></span></a>
 	<a href="/contact">Contact<span></span></a>
 </header>
+<header class="navLight">
+
+		<a class="work" href="/">Work<br><span></span></a>
+		<a href="/about">About me<span></span></a>
+		<a href="/contact">Contact<span></span></a>
+	
+</header>

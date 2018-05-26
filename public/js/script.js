@@ -168,13 +168,18 @@ if(window.location.pathname == "/") {
 
 }
 
-if(window.location.pathname == "/about") {
-	$("header").css("position", "absolute");
-	 $(document).on("scroll", function() {
-	 	if($(window).scrollTop() >= 100) {
+if(window.location.pathname == "/about" || window.location.pathname == "/website") {
 
-	 	}
-	 })
+	$(window).on("scroll", function(){
+		if($(window).scrollTop() >= 100) {
+			$(".navLight").addClass("active");
+		}
+		else {
+			$(".navLight").removeClass("active");
+		}
+});
+	
+	$("header").css("position", "absolute");
 }
 
 });

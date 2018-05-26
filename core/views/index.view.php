@@ -16,7 +16,7 @@
 	<div class="main">
 	<ul class="front">
 		<?php foreach ($info as $site) :?>
-			<li><h1><a href="website/<?= $site["name"] ?>"><?= $site["name"] ?></a></h1></li>
+			<li><h1><a href="website?w=<?= $site["name"] ?>"><?= $site["name"] ?></a></h1></li>
 			
 		<?php endforeach; ?>
 	</ul>
