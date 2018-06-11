@@ -1,7 +1,9 @@
 $(window).ready(function(){
+	if($(document).width() > 670) {
 	$(".pageName").css("display", "none");
-	$(".navigation").css("display", "flex");
+	$(".navigation").css("display", "grid");
 	$("footer").addClass("fInactive");
+}
 });
 $(window).on("load", function(){
 
@@ -14,27 +16,36 @@ var inView = 1;
 var animating = false;
 
 $(window).on('scroll', function(){
-  var s = $(window).scrollTop(),
-      d = $(document).height(),
-      c = $(window).height();
-  var scrollPercent = (s / (d - c)) * 100;
+	  var s = $(window).scrollTop(),
+	      d = $(document).height(),
+	      c = $(window).height(),
+	      n = $(".navTop > ul > li").length;
+	  var scrollPercent = (s / (d - c)) * 100;
 
-  function scrollSize(num) {
-  		var height =  num * $(".front").children().length;
-  		return scrollPercent * height / 100;
-  } 
+	function scrollSize(num) {
+	  	var height =  num * $(".front").children().length;
+	  	return scrollPercent * height / 100;
+	} 
+	 var navTopScrollHeight = (100 - scrollSize(15));
+	 console.log(navTopScrollHeight)
+	 var navBotScrollHeight = (scrollSize(15));
+	if($(document).width() >= 800) {
+	
+	  $(".main ul").css("top", "-"  + scrollSize(70) + "%");
+	}
+	else if($(document).width() < 800 && $(document).width() >= 670){
+	  $(".main ul").css("top", "-"  + scrollSize(83) + "%");
+	}
+	$(".navTop ul").css("top", navTopScrollHeight + "%" );
+	$(".navBot ul").css("top", "-" + navBotScrollHeight + "%");
 
-  var navTopScrollHeight = (200 - scrollSize(55));
-  var navBotScrollHeight = (90 + scrollSize(55));
-
-  $(".navTop ul").css("margin-top", navTopScrollHeight );
-  $(".navBot ul").css("margin-top", "-" + navBotScrollHeight + "px");
-  $(".main ul").css("margin-top", "-"  + scrollSize(66) + "px")
-  
+	  
 })
-if(window.location.pathname != "/") {
+if(window.location.pathname != "/" && window.location.pathname != "/website") {
 	$("header").css("color", "black");
-	$("header").find("span").css("background", "#000")
+	$(".logo").css("border", "2px solid #000");
+	$("header").find("span").css("background", "#000");
+	$(".logo img").attr("src", "public/media/logoBlack.png");
 }
 
 $(".page:first-child").children(".image").addClass("pActive");
@@ -151,7 +162,7 @@ if(window.location.pathname == "/") {
 				
 			}
 			else if(offset >= height/2 && offset <= height ){			
-				scrollDown();
+				scrollDown(1);
 			}
 			else if(offset >= height && offset <= height + height/2){
 				
@@ -179,7 +190,7 @@ if(window.location.pathname == "/about" || window.location.pathname == "/website
 		}
 });
 	
-	$("header").css("position", "absolute");
+	$("#mainHeader").css("position", "absolute");
 }
 
 });

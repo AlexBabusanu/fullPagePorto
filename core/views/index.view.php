@@ -1,4 +1,6 @@
-<?php require("shared/header.php"); ?>
+<?php 
+	
+	require("shared/header.php"); ?>
 
 
 <div class="navigation">
