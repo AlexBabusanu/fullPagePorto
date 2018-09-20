@@ -29,9 +29,9 @@
 			<img src="<?= $website["imageFull"]?>">			
 		</div>	
 		<div class="imagesText">
-			<h4>Text</h4>
+			<h4>Technologies used</h4>
 			<div class="break"></div>
-			<p>small texT</p>
+			<p><?= $website["tech"] ?></p>
 		</div>
 		<div class="dualImages">
 			<img src="<?=$website["firstHalfImage"]?>">

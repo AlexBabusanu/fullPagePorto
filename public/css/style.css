@@ -242,6 +242,7 @@ nav a:hover span {
 	position:relative;
 }
 
+/* footer */
 
 footer {
 
@@ -254,7 +255,7 @@ footer {
 	box-shadow:inset 0px 6px 11px -5px #000;
 
 }
-footer ul, {
+footer ul {
 	color:#fff;
 }
 footer ul, .contact ul {
@@ -550,6 +551,10 @@ button:hover {
 	.main {
 		height:50px;
 	}
+	.main li {
+		margin:15px;
+		letter-spacing: 0.1em;
+	}
 	.navigation h3 {
 		font-size:15px;
 		
@@ -575,5 +580,8 @@ button:hover {
 	}
 	.dualImages {
 		grid-template-columns:1fr;
+	}
+	.navBot ul {
+		margin-top:-20%;
 	}
 }

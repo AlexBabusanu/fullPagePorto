@@ -13,6 +13,7 @@ return [
 			"title" => "Final Product", 
 			"detail" => "This is V2.0 of the website"
 		],
+		"tech" => "JQuery, PHP"
 	],
 	"First Portofolio" =>[
 		"name" => "First Portofolio",

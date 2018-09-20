@@ -34,7 +34,7 @@ require("shared/header.php");
 			} ?>
 		</div>
 	</div>
-		<input type="submit" name="submitted">
+		<button type="submit" name="submitted">Submit</button>
 	</form>
 	<ul>
 	<li><a href=""><i class="fab fa-facebook-f"></i></a></li>

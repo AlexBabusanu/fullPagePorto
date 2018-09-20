@@ -12,7 +12,7 @@
 
 <header id="mainHeader">
 	<nav>
-		<a href="#" class="logo">
+		<a href="/" class="logo">
 			<img class="logoWhite" src="public/media/logoWhite.png">
 		</a>
 		<ul>
