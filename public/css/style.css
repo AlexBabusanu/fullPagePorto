@@ -405,6 +405,9 @@ button:hover {
 	max-width:200px;
 	filter:grayscale(100%);
 }
+.col svg:hover {
+	filter:none;
+}
 .break {
 	width:50px;
 	height:1px;

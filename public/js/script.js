@@ -201,7 +201,7 @@ $(window).on("load", function(){
 			else {
 				$(".navLight").removeClass("active");
 			}
-	});
+		});
 		
 		$("#mainHeader").css("position", "absolute");
 	}
