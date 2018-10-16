@@ -10,6 +10,9 @@
 	
 </div>
 <div class="details">
+	<div class="visit">
+		<a href="" class="visitButton">Visit Website</a>
+	</div>
 	<div class="textSegment">
 			<h1>The website</h1>
 			<div class="break"></div>

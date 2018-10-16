@@ -8,6 +8,7 @@ body {
 	margin:0;
 	padding:0;
 	font-family: 'Roboto', sans-serif;
+	width:100%;
 }
 
 a {
@@ -43,7 +44,7 @@ nav {
 	align-items: center;
 	justify-content: center;
 	top:0;
-
+	font-weight:bolder;
 }
 nav a {
 	font-size:10px;
@@ -57,8 +58,8 @@ nav a {
 	height:25px;
 	padding:5px;
 	border-radius:50%;
-	border:2px solid #fff;
-	box-shadow: 0 0 1px 0px white inset, 0 0 1px 0px white;
+	;
+	box-shadow: 0 0 0px 0px #fff inset, 0 0 1px 4px #fff;
 }
 nav ul {
 	list-style:none;
@@ -72,6 +73,7 @@ nav li {
 nav li:nth-child(2) {
 	margin-left:50px;
 }
+
 .logo img {
 	height:inherit;
 	margin-left:-1px;
@@ -98,7 +100,7 @@ nav a:hover span {
 
 }
 .navLight .logo {
-	border:none!important;
+	box-shadow:none!important;
 	margin-top:0;
 }
 .navLight ul {
@@ -130,6 +132,7 @@ nav a:hover span {
 	text-align:center;
 	margin-top:40px;
 	display:none;
+	text-shadow:0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
 }
 .navigation ul {
 	list-style:none;
@@ -159,7 +162,7 @@ nav a:hover span {
 	top:0;
 }
 .navBot ul {
-	margin-top:-10%;
+	margin-top:-12%;
 	position:relative;
 	
 	letter-spacing:.200em;
@@ -237,6 +240,7 @@ nav a:hover span {
 	position:absolute;
 	z-index:5;
 	overflow:hidden;
+	text-shadow:0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
 }
 .title h1 {
 	position:relative;
@@ -280,6 +284,7 @@ footer ul li a, .contact ul li a {
 	transition: all 200ms linear;
 }
 
+/* contact page */
 
 .contact {
 	height:100vh;
@@ -296,10 +301,10 @@ footer ul li a, .contact ul li a {
 }
 
 .contact li {
-	border: 2px solid #000;
+	box-shadow: 0 0 0px 0px #000 inset, 0 0 1px 2px #000;
 }
 .contact li:hover {
-	box-shadow:inset 0 0 0 2px #000;
+	box-shadow: 0 0 4px 4px #000;
 	transition: 200ms all linear;
 }
 
@@ -309,6 +314,9 @@ form {
 	align-items:center;
 	margin:15px auto;
 	width:100%;
+}
+label {
+	font-weight:bolder;
 }
 .input {
 	width:650px;
@@ -437,6 +445,9 @@ button:hover {
 	font-size:40px;
 	letter-spacing: .200em;
 }
+.title i {
+	padding-left:8px;
+}
 .details {
 	background: #fff;
 	color:#000;
@@ -449,9 +460,25 @@ button:hover {
 .details p {
 	text-align: center;
 }
-
+.visit {
+	display:flex;
+	justify-content: center;
+	padding:50px;
+}
+.visitButton {
+	display:flext;
+	justify-content: center;
+	align-items: center;
+	border:2px solid #000;
+	padding:15px;
+	letter-spacing: 0.150em;
+}
+.visitButton:hover {
+	box-shadow:inset 0 0 0 2px #000;
+	transition: 200ms all linear;
+}
 .textSegment {
-	margin:80px;
+	margin:30px 80px 80px 80px;
 }
 .info {
 	display:grid;
@@ -532,7 +559,7 @@ button:hover {
 		
 	}
 	.navBot ul {
-		margin-top:-15%;
+		margin-top:-18%;
 	}
 	.main h1 {
 		font-size:40px;
@@ -585,6 +612,6 @@ button:hover {
 		grid-template-columns:1fr;
 	}
 	.navBot ul {
-		margin-top:-20%;
+		margin-top:-23%;
 	}
 }
