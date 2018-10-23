@@ -7,9 +7,7 @@ if(isset($_POST["submitted"])){
 	$name = $_POST["name"];
 	$email = $_POST["email"];
 	$message = $_POST["message"];
-	$error = [];
-	
-	
+	$error = [];	
 
 	if(strlen($name) < 3 || strlen($name) > 50){
 		$error["name"] ="The name must be between 3 and 50 characters long.";
@@ -22,6 +20,10 @@ if(isset($_POST["submitted"])){
 	}
 	if(strlen($message) < 1) {
 		$error["message"] = "Please include a message";
+	}
+
+	else {
+		mail("babusanualex@yahoo.com", $name, $message, $email);
 	}
 }
 

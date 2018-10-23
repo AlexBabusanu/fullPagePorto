@@ -1,12 +1,12 @@
 <?php require("shared/header.php"); ?>
 
-<div class="website">
+<div class="website" style="background-image:url(<?= $website["image"] ?>)">
 	<div class="title">
 		<h1><?= $_GET["w"] ?></h1>
 		<a href="/"><i class="far fa-times-circle"></i></a>
 	</div>
 
-	<img src="<?= $website["image"] ?>">
+	<!-- <img src="<?= $website["image"] ?>"> -->
 	
 </div>
 <div class="details">

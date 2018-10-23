@@ -36,12 +36,12 @@ require("shared/header.php");
 	</div>
 		<button type="submit" name="submitted">Submit</button>
 	</form>
-	<ul>
-	<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-	<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-	<li><a href=""><i class="fab fa-github"></i></a></li>
-	<li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-</ul>
+	<ul class="mediaLinks">
+		<li><a href="https://www.facebook.com/Alex.Babusanu"><i class="fab fa-facebook-f"></i></a></li>
+		<li><a href="https://codepen.io/Skidi/"><i class="fab fa-codepen"></i></a></li>
+		<li><a href="https://github.com/Skidi"><i class="fab fa-github"></i></a></li>
+		<li><a href="https://www.linkedin.com/in/babusanu-alex-769b2886/"><i class="fab fa-linkedin-in"></i></a></li>
+	</ul>
 </div>
 
 <?php require("shared/footer.php"); ?>

@@ -130,12 +130,12 @@ nav a:hover span {
 	justify-content: center;
 	z-index:2;
 	text-align:center;
-	margin-top:40px;
 	display:none;
 	text-shadow:0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;
 }
 .navigation ul {
 	list-style:none;
+	cursor: pointer;
 }
 .navigation p {
 	transition: 1000ms all linear;
@@ -189,10 +189,12 @@ nav a:hover span {
 	justify-content: space-between;
 }
 .main li {
+	margin-top:10px;
 	line-height:0;
 	font-size:35px;
 	letter-spacing:.300em;
 }
+
 .nActive {
 	opacity:0;
 	transition: 1000ms all linear;
@@ -249,7 +251,7 @@ nav a:hover span {
 /* footer */
 
 footer {
-
+	z-index:15;
 	color:#000;
 	background: #fff;
 	height:300px;
@@ -259,20 +261,18 @@ footer {
 	box-shadow:inset 0px 6px 11px -5px #000;
 
 }
-footer ul {
-	color:#fff;
-}
-footer ul, .contact ul {
+
+.mediaLinks {
 	list-style:none;
 	display:flex;
 	justify-content:center;
 	padding:0;
 }
-footer ul li, .contact ul li {
+.mediaLinks li {
 	margin:10px;
 	border-radius:50%;
 }
-footer ul li a, .contact ul li a {
+.mediaLinks a {
 	padding:10px;
 	width:15px;
 	height:15px;
@@ -299,13 +299,16 @@ footer ul li a, .contact ul li a {
 
 
 }
-
-.contact li {
-	box-shadow: 0 0 0px 0px #000 inset, 0 0 1px 2px #000;
+.contact h1 {
+	margin-top:50px;
 }
-.contact li:hover {
+
+.mediaLinks li {
+	box-shadow: 0 0 0px 0px #000, 0 0 1px 2px #000;
+	transition: box-shadow 200ms linear;
+}
+.mediaLinks li:hover {
 	box-shadow: 0 0 4px 4px #000;
-	transition: 200ms all linear;
 }
 
 form {
@@ -429,10 +432,13 @@ button:hover {
 .website {
 	height:50vh;
 	overflow:hidden;
+	background-size:cover;
 
 }
-.website img {
-	width:100%;
+
+.website a {
+	position: absolute;
+	bottom:0;
 }
 .title {
 	position:absolute;
@@ -482,7 +488,6 @@ button:hover {
 }
 .info {
 	display:grid;
-	margin: 80px;
 	grid-template-columns: 1fr;
 }
 .aboutWebsite {	
@@ -506,6 +511,7 @@ button:hover {
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap:15px;
+	grid-row-gap:15px;
 	margin:80px 0;
 }
 .imagesText .break {
@@ -547,7 +553,8 @@ button:hover {
 
 
 
-@media screen and (max-width:800px) {
+@media screen and (min-width:670px) and (max-width:800px) {
+	
 	.main {
 		height:50px;
 	}
@@ -575,9 +582,28 @@ button:hover {
 	.col:nth-child(2n) {
 		border-right:none;
 	}
+	
 }
 
 @media screen and (max-width:670px) {
+	
+	.logo {
+		position:relative;
+		margin-top:0;
+		margin-right:15px;
+	}
+	nav ul {
+		margin-left:0;
+	}
+	nav li:nth-child(2){
+		margin-left:15px;
+	}
+	.navLight ul {
+		margin:5px 0;
+	}
+	.navigation {
+		grid-template-rows: 1fr 50px 1fr;
+	}
 	.main {
 		height:50px;
 	}
@@ -585,6 +611,7 @@ button:hover {
 		margin:15px;
 		letter-spacing: 0.1em;
 	}
+
 	.navigation h3 {
 		font-size:15px;
 		
@@ -593,6 +620,15 @@ button:hover {
 		font-size:30px;
 		
 	}
+
+	.about h1 {
+		font-size:18px;
+	}
+	.introduction{
+		margin:30px;
+	}
+
+	
 	.textArea {
 		width:90%;
 	}
@@ -613,5 +649,10 @@ button:hover {
 	}
 	.navBot ul {
 		margin-top:-23%;
+	}
+}
+@media screen and (max-height:670px){
+	.contact {
+		height:inherit;
 	}
 }
